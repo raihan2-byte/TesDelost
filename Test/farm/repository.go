@@ -94,14 +94,3 @@ func (r *repository) CreateFarm(farm Farm) (Farm, error) {
 
 	return farm, nil
 }
-
-// func (r *repository) FindByUserId(userID int) ([]Farm, error) {
-// 	var farm []Farm
-
-// 	err := r.db.Joins("User", r.db.Where(&user.User{ID: userID})).Find(&farm).Error
-// 	fmt.Println("eror", farm)
-// 	if err != nil {
-// 		return farm, err
-// 	}
-// 	return farm, nil
-// }
