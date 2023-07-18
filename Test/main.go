@@ -60,20 +60,9 @@ func main() {
 	api1.GET("/", poundsHandler.GetPounds)
 	api1.GET("/:id", poundsHandler.GetOnePounds)
 
-	// router.GET("/increment-count/:endpoint", statisticsHandler.IncrementCountHandler)
 	router.GET("/statistics", statisticsHandler.GetStatisticsHandler)
-	router.GET("/unique-user-agents-count", statisticsHandler.GetUniqueUserAgentsCountHandler)
 
 
-
-
-	// Menetapkan handler untuk setiap endpoint
-
-	// router.POST("/increment", statisticsHandler.IncrementEndpointHandler)
-	// router.GET("/statistics", statisticsHandler.GetEndpointCountsHandler)
-	// router.POST("/user-agent", statisticsHandler.AddUserAgentHandler)
-	// router.GET("/user-agents", statisticsHandler.GetUniqueUserAgentsHandler)
-	// router.GET("/user-agent-count", statisticsHandler.GetUserAgentCountHandler)
 
 	router.Run(":8080")
 
