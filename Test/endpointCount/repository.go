@@ -7,7 +7,6 @@ import (
 type StatisticsRepository interface {
 	IncrementCount(endpoint string, useragent string) error
 	GetStatistics() ([]Statistics, error)
-	// SaveUserAgent(userAgent UserAgent) error
 	GetUniqueUserAgentsCount() (int, error)
 }
 
